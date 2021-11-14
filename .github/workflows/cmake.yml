@@ -25,10 +25,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Checkout submodules
-        run: |
-          cd ../
-          dir
-          git submodule update --init --recursive
+        run:  git submodule update --init --recursive
         working-directory: ${{ github.workspace }}
 
       - name: Create Build Environment
